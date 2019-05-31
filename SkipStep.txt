@@ -1,0 +1,22 @@
+
+
+class Solution {
+    public int JumpFloor(int target) {
+        if(target == 0)
+            return 0;
+        if(target == 1)
+            return 1;
+        int a = 1;
+        int b = 1;
+        while(target-1 > 0){
+            int tmp = b;
+            b = a+b;
+            a = tmp;
+            target--;
+        }
+        return b;
+    }
+}
+
+public class Main {
+}
